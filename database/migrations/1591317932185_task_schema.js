@@ -35,7 +35,7 @@ class TaskSchema extends Schema {
 
       table.string('title').notNullable();
       table.text('description').notNullable();
-
+      table.timestamp('due_date');
       table.timestamps();
     });
   }
