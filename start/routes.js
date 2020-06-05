@@ -7,5 +7,5 @@ Route.post('sessions', 'SessionController.store');
 Route.post('password', 'ForgotPasswordController.store');
 Route.put('password', 'ForgotPasswordController.update');
 
-Route.get('/files/:id ', 'FileController.show');
+Route.get('/files/:id', 'FileController.show');
 Route.post('/files', 'FileController.store');

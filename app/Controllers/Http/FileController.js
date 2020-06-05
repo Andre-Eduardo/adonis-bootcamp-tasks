@@ -34,7 +34,11 @@ class FileController {
     }
   }
 
-  async show({ params, request, response, view }) {}
+  async show({ params, response }) {
+    const file = await File.findOrFail(params.id);
+
+    return response.download(Helpers.tmpPath(`uploads/${file.file}`));
+  }
 }
 
 module.exports = FileController;
