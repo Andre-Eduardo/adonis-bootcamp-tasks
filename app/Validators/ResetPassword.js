@@ -1,4 +1,5 @@
 'use strict';
+const Antl = use('Antl');
 
 class ResetPassword {
   get validateAll() {
@@ -10,6 +11,9 @@ class ResetPassword {
       token: 'requied',
       password: 'requied|confirmed',
     };
+  }
+  get messages() {
+    return Antl.list('validation');
   }
 }
 
